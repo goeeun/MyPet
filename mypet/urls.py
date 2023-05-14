@@ -10,3 +10,6 @@ urlpatterns = [
     path('user/', include('user.urls')),
 
 ]
+urlpatterns += [
+    path('home/', RedirectView.as_view(url='/index/', permanent=True)),
+]
