@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> MyPet Website</title>
-    <link rel = "stylesheet" type="text/css" href="{% static 'css/aa.css' %}">
+    <link rel = "stylesheet" type="text/css" href="{% static 'css/index.css' %}">
     <link rel = "stylesheet" type="text/css" href="{% static 'css/scroll.css' %}">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
@@ -19,7 +19,7 @@
     <header id = "header"> 
         <nav class ="menu">
             <ul>
-                <li><a href = "{% url 'aa' %}" <b>Home</b></a></li>
+                <li><a href = "{% url 'index' %}" <b>Home</b></a></li>
                 <li><a href = "{% url 'about' %}" <b>About</b></a></li>
                 <li><a href = "{% url 'contact' %}" <b>Contact</b></a></li>
                 {% if login_session %}

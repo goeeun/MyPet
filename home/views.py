@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-def aa(request):
+def index(request):
     context={}
 
     login_session = request.session.get('login_session','')
@@ -9,7 +9,7 @@ def aa(request):
     else:
         context['login_session'] =True
 
-    return render(request, 'home/aa.html', context)
+    return render(request, 'home/index.html', context)
 
 
 
