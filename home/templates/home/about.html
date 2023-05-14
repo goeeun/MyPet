@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> MyPet Website</title>
+    <link rel = "stylesheet" type="text/css" href="{% static 'css/aa.css' %}">
+    <link rel = "stylesheet" type="text/css" href="{% static 'css/scroll.css' %}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <header id = "header"> 
+        <nav class ="menu">
+            <ul>
+                <li><a href = "{% url 'aa' %}" <b>Home</b></a></li>
+                <li><a href = "{% url 'about' %}" <b>About</b></a></li>
+                <li><a href = "{% url 'favorites' %}" <b>favorites</b></a></li>
+                <li><a href = "{% url 'contact' %}" <b>Contact</b></a></li>
+                {% if login_session %}
+                    <li><a href="{% url 'user:logout' %}" >Logout</a></li>
+                {% else %}
+                    <li><a href="{% url 'user:signup' %}" class="signup-btn">Signup</a></li>
+                    <li><a href="{% url 'user:login' %}" class="login-btn">Login</a></li>
+                {% endif %}
+        </nav>
+    </header> 
+    <div class="list">
+        <div class ="two">
+            <img class = "me" src ="/static/img/mmo.jpg" alt="" width="450px;" height="500px">
+            <h3 class ="intext"> <strong>Who is 몽자?<br></strong><br><br>
+                Hello! I'm 몽자. Welcome to my homepage.<br><br>
+                
+                I'm a female Poodle. 
+                I'm 7 years old this year and <br>my birthday is on April 8th. <br>
+                I'm very gentle and cute personality and <br>love my family very much.
+                <br>
+                I enjoy various hobbies and travels, <br>
+                sharing them with people <br>through social media such as YouTube and Instagram.
+                <br>
+                <br>
+                <br>
+                </h3>
+        </div>
+    </div>
+</div>
+</body>

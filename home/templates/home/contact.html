@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> MyPet Website</title>
+    <link rel = "stylesheet" type="text/css" href="{% static 'css/aa.css' %}">
+    <link rel = "stylesheet" type="text/css" href="{% static 'css/scroll.css' %}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <header id = "header"> 
+        <nav class ="menu">
+            <ul>
+                <li><a href = "{% url 'aa' %}" <b>Home</b></a></li>
+                <li><a href = "{% url 'about' %}" <b>About</b></a></li>
+                <li><a href = "{% url 'contact' %}" <b>Contact</b></a></li>
+                {% if login_session %}
+                    <li><a href="{% url 'user:logout' %}" >Logout</a></li>
+                {% else %}
+                    <li><a href="{% url 'user:signup' %}" class="signup-btn">Signup</a></li>
+                    <li><a href="{% url 'user:login' %}" class="login-btn">Login</a></li>
+                {% endif %}
+        </nav>
+    </header> 
+    <div class="list">
+        <div class = "four">
+            <img class = "contact_img" src ="/static/img/aaa.jpg">
+            <a href="https://www.youtube.com/@MONGJA/featured" class="ct">Velog</a>
+            <a href="https://instagram.com/mongja0408?igshid=NTc4MTIwNjQ2YQ==" class="ct">Insta</a>
+            <a href="https://www.facebook.com/mongja0408" class="ct">Facebook</a>
+        </div>
+    </div>
+  </div>
+  </body>
