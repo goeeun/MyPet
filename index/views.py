@@ -9,13 +9,13 @@ def index(request):
     else:
         context['login_session'] =True
 
-    return render(request, 'home/index.html', context)
+    return render(request, 'index/index.html', context)
 
 
 
 def favorites(request):
-    return render(request,'home/favorites.html')
+    return render(request,'index/favorites.html')
 def about(request):
-    return render(request,'home/about.html')
+    return render(request,'index/about.html')
 def contact(request):
-    return render(request,'home/contact.html')
+    return render(request,'index/contact.html')
